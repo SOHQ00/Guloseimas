@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guloseimas da Vó Rute | Doces, Salgados e Bolos</title>
+    <meta name="description"
+        content="Doces, salgados fritos e assados e bolos feitos com carinho. Conheça a Guloseimas da Vó Rute e faça sua encomenda.">
+    <meta name="keywords"
+        content="guloseimas da vo rute, salgados fritos, salgados assados, bolos artesanais, doces caseiros, coxinhas, esfihas, bolos decorados, encomendas para festa">
+    <meta property="og:title" content="Guloseimas da Vó Rute | Doces, Salgados e Bolos">
+    <meta property="og:description"
+        content="Doces, salgados fritos e assados e bolos feitos com carinho. Conheça a Guloseimas da Vó Rute e faça sua encomenda.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/imagens reais/logo.png">
+</head>
+
+<body>
+
+    <!-- Barra de Notificação Promocional -->
+    <aside class="top-promo-bar" aria-label="Aviso promocional">
+        <span>✨ Siga no Instagram <strong><a href="https://www.instagram.com/guloseimasdavorute" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; display: inline-flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>@guloseimasdavorute</a></strong> | 10% OFF na 1ª encomenda com o cupom:</span>
+        <button class="coupon-pill" onclick="copyCoupon('PRIMEIRACOMPRA10')" title="Clique para copiar o cupom">
+            <code>PRIMEIRACOMPRA10</code> 📋
+        </button>
+    </aside>
+
+    <!-- 1. Header / Menu Principal -->
+    <header class="main-header" id="mainHeader">
+        <div class="container nav-container">
+            <a href="#inicio" class="brand-logo" id="brandLogo" data-tab="inicio" aria-label="Guloseimas da Vó Rute - Página Inicial">
+                <img src="assets/imagens reais/logo.png" onerror="this.onerror=null; this.src='assets/images/logo.png';" alt="Logo Guloseimas da Vó Rute" class="brand-logo-img">
+                <div class="brand-title">
+                    Guloseimas
+                    <span>Da Vó Rute</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav aria-label="Navegação principal" class="desktop-nav">
+                <ul class="nav-links" role="tablist">
+                    <li><a href="#inicio" class="nav-tab-link active" data-tab="inicio" role="tab" aria-selected="true">🏠 Início</a></li>
+                    <li><a href="#bolos" class="nav-tab-link" data-tab="bolos" role="tab" aria-selected="false">🎂 Bolos</a></li>
+                    <li><a href="#doces" class="nav-tab-link" data-tab="doces" role="tab" aria-selected="false">🍬 Doces</a></li>
+                    <li><a href="#salgados" class="nav-tab-link" data-tab="salgados" role="tab" aria-selected="false">🥟 Salgados</a></li>
+                    <li><a href="#sobre" class="nav-tab-link" data-tab="sobre" role="tab" aria-selected="false">📖 Sobre nós</a></li>
+                    <li><a href="#contato" class="nav-tab-link" data-tab="contato" role="tab" aria-selected="false">📞 Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="btn-icon" id="openCartBtn" title="Ver Sacola de Compras" aria-label="Sacola de compras">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-counter" id="cartCounter">0</span>
+                </button>
+
+                <a href="#cardapio" class="btn-whatsapp-header" id="btnHeaderCta" data-tab="doces">
+                    🛒 Fazer Pedido
+                </a>
+                <!-- Botão Hambúrguer Mobile -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Drawer Mobile -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="brand-logo">
+                <img src="assets/imagens reais/logo.png" onerror="this.onerror=null; this.src='assets/images/logo.png';" alt="Logo Guloseimas da Vó Rute" class="brand-logo-img">
+                <div class="brand-title">
+                    Guloseimas
+                    <span>Da Vó Rute</span>
+                </div>
+            </div>
+            <button class="close-mobile-drawer" id="closeMobileDrawerBtn" aria-label="Fechar menu">✕</button>
+        </div>
+        <ul class="mobile-nav-links" role="tablist">
+            <li><a href="#inicio" class="mobile-link active" data-tab="inicio" role="tab" aria-selected="true">🏠 Início</a></li>
+            <li><a href="#bolos" class="mobile-link" data-tab="bolos" role="tab" aria-selected="false">🎂 Bolos</a></li>
+            <li><a href="#doces" class="mobile-link" data-tab="doces" role="tab" aria-selected="false">🍬 Doces</a></li>
+            <li><a href="#salgados" class="mobile-link" data-tab="salgados" role="tab" aria-selected="false">🥟 Salgados</a></li>
+            <li><a href="#sobre" class="mobile-link" data-tab="sobre" role="tab" aria-selected="false">📖 Sobre nós</a></li>
+            <li><a href="#contato" class="mobile-link" data-tab="contato" role="tab" aria-selected="false">📞 Contato</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <a href="https://wa.me/5511999322574?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20com%20a%20V%C3%B3%20Rute."
+               target="_blank" rel="noopener" class="btn-primary" style="width: 100%; text-align: center; justify-content: center;">
+                💬 Pedir pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- 2. Hero / Página Inicial -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge-pill">
+                        <span>✨</span> Receitas de família feitas com amor e dedicação
+                    </div>
+                    <h1 class="hero-title">
+                        O sabor especial das receitas de <span class="highlight-text">vó</span>.
+                    </h1>
+                    <p class="hero-description">
+                        Doces, salgados e bolos feitos com carinho para deixar seus momentos ainda mais gostosos.
+                        Coxinhas douradas, esfihas que derretem na boca, docinhos enrolados à mão e bolos artesanais com ingredientes selecionados.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#cardapio" class="btn-primary" id="btnHeroExplore">
+                            <span>Ver cardápio</span>
+                        </a>
+                        <a href="#encomendas" class="btn-outline" id="btnHeroCustomBox">
+                            <span>Fazer pedido</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon-circle">🥸</div>
+                            <span>Fritos na Hora</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-circle">🥐</div>
+                            <span>Assados Dourados</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-circle">🎂</div>
+                            <span>Bolos Artesanais</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-circle">❤️</div>
+                            <span>Sabor de Família</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media-wrapper">
+                    <div class="hero-main-card">
+                        <img src="assets/imagens reais/bolo_salgado_06.png"
+                            alt="Bolo salgado e delícias artesanais da Vó Rute"
+                            id="heroCakeImage">
+                    </div>
+
+                    <!-- Crachás Flutuantes -->
+                    <div class="floating-badge badge-top-right">
+                        <div class="badge-icon gold">⭐</div>
+                        <div>
+                            <h4>4.9 / 5.0</h4>
+                            <p>Mais de 1.800 encomendas</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left">
+                        <div class="badge-icon pink">❤️</div>
+                        <div>
+                            <h4>Receita de Vó</h4>
+                            <p>Carinho em cada detalhe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Seção "Sobre a Vó Rute" -->
+        <section class="about-section" id="sobre">
+            <div class="container about-grid">
+                <div class="about-media">
+                    <div class="about-img-frame">
+                        <img src="assets/imagens reais/bolo_salgado_08.png"
+                            alt="Delícias artesanais preparadas na cozinha da Vó Rute"
+                            loading="lazy">
+                        <div class="about-experience-badge">
+                            <span class="badge-number">100%</span>
+                            <span class="badge-text">Artesanal &amp; Afetivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text-content">
+                    <span class="section-tag">Nossa História de Afeto</span>
+                    <h2 class="section-title">Feito com carinho, como antigamente</h2>
+                    <p class="about-lead">
+                        Na Guloseimas da Vó Rute, cada receita é preparada com carinho, cuidado e aquele sabor especial
+                        que lembra os melhores momentos em família. Trabalhamos com doces, salgados fritos e assados e
+                        bolos preparados artesanalmente para tornar cada ocasião ainda mais especial.
+                    </p>
+                    <p class="about-secondary">
+                        Aqui não há processos industriais nem atalhos: selecionamos manteiga de verdade, queijo de primeira,
+                        temperos frescos da horta e chocolates nobres. O resultado é aquela sensação inconfundível de afeto
+                        que só a comida feita com amor pode proporcionar.
+                    </p>
+
+                    <div class="about-highlights-row">
+                        <div class="about-pill">
+                            <span class="about-pill-icon">🥣</span>
+                            <div>
+                                <strong>Massa Caseira</strong>
+                                <small>Textura aveludada e leve</small>
+                            </div>
+                        </div>
+                        <div class="about-pill">
+                            <span class="about-pill-icon">🌿</span>
+                            <div>
+                                <strong>Temperos Frescos</strong>
+                                <small>Hortelã, cheiro verde e afeto</small>
+                            </div>
+                        </div>
+                        <div class="about-pill">
+                            <span class="about-pill-icon">🎂</span>
+                            <div>
+                                <strong>Sem Conservantes</strong>
+                                <small>Produzido fresco sob pedido</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Categorias / Cardápio: "Nossas delícias" -->
+        <section class="catalog-section" id="cardapio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Cardápio Artesanal</span>
+                    <h2 class="section-title">Nossas delícias</h2>
+                    <p class="section-subtitle">
+                        Escolha uma categoria abaixo para navegar ou explore nosso cardápio completo com opções deliciosas para qualquer momento.
+                    </p>
+                </div>
+
+                <!-- 4 Cards de Categoria em Destaque -->
+                <div class="categories-four-grid">
+                    <!-- Card 1: Bolos -->
+                    <div class="category-featured-card">
+                        <div class="category-card-img-wrap">
+                            <img src="assets/imagens reais/bolo_salgado_05.png" alt="Bolos artesanais e bolos salgados da Vó Rute" loading="lazy">
+                            <span class="category-badge">🎂 Bolos</span>
+                        </div>
+                        <div class="category-card-body">
+                            <h3>🎂 Bolos</h3>
+                            <p>Bolos salgados decorados e bolos doces especiais para aniversários e festas.</p>
+                            <button class="btn-category-action" onclick="filterCatalog('bolos')">
+                                Ver opções →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Doces -->
+                    <div class="category-featured-card">
+                        <div class="category-card-img-wrap">
+                            <img src="assets/imagens reais/bolo_salgado_07.png" alt="Doces artesanais e brigadeiros" loading="lazy">
+                            <span class="category-badge">🍬 Doces</span>
+                        </div>
+                        <div class="category-card-body">
+                            <h3>🍬 Doces</h3>
+                            <p>Brigadeiros gourmet e sobremesas preparadas artesanalmente com chocolate nobre.</p>
+                            <button class="btn-category-action" onclick="filterCatalog('brigadeiros')">
+                                Ver opções →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Salgados Fritos -->
+                    <div class="category-featured-card">
+                        <div class="category-card-img-wrap">
+                            <img src="assets/imagens reais/bolo_salgado_03.png" alt="Salgados fritos sequinhos na hora" loading="lazy">
+                            <span class="category-badge">🥸 Salgados Fritos</span>
+                        </div>
+                        <div class="category-card-body">
+                            <h3>🥸 Salgados fritos</h3>
+                            <p>Coxinhas douradas, bolinhas de queijo e quibes sequinhos e crocantes.</p>
+                            <button class="btn-category-action" onclick="filterCatalog('salgados-fritos')">
+                                Ver opções →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Salgados Assados -->
+                    <div class="category-featured-card">
+                        <div class="category-card-img-wrap">
+                            <img src="assets/imagens reais/bolo_salgado_04.png" alt="Salgados assados quentinhos e dourados" loading="lazy">
+                            <span class="category-badge">🥐 Salgados Assados</span>
+                        </div>
+                        <div class="category-card-body">
+                            <h3>🥐 Salgados assados</h3>
+                            <p>Esfihas fofinhas, empadas que desmancham na boca e folhados fresquinhos.</p>
+                            <button class="btn-category-action" onclick="filterCatalog('salgados-assados')">
+                                Ver opções →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do Cardápio (Busca, Ordenação e Filtros) -->
+                <div class="catalog-controls">
+                    <div class="search-and-sort">
+                        <div class="search-box">
+                            <span>🔍</span>
+                            <input type="text" id="searchInput"
+                                placeholder="Buscar por coxinha, esfiha, empada, bolo, brigadeiro..."
+                                aria-label="Buscar produtos">
+                        </div>
+
+                        <select id="sortSelect" class="sort-select" aria-label="Ordenar produtos">
+                            <option value="featured">✨ Em Destaque</option>
+                            <option value="price-low">💰 Menor Preço</option>
+                            <option value="price-high">💽 Maior Preço</option>
+                            <option value="name">📤 Nome (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <!-- Abas de Categorias -->
+                    <div class="category-pills-list" role="tablist">
+                        <button class="category-pill active" data-category="all" role="tab">Todas as Delícias</button>
+                        <button class="category-pill" data-category="salgados" role="tab">🥟 Todos os Salgados</button>
+                        <button class="category-pill" data-category="salgados-fritos" role="tab">🥸 Salgados Fritos</button>
+                        <button class="category-pill" data-category="salgados-assados" role="tab">🥐 Salgados Assados</button>
+                        <button class="category-pill" data-category="brigadeiros" role="tab">🍬 Doces &amp; Brigadeiros</button>
+                        <button class="category-pill" data-category="bolos" role="tab">🎂 Bolos &amp; Tortas</button>
+                        <button class="category-pill" data-category="brownies" role="tab">🍪 Sobremesas &amp; Cookies</button>
+                        <button class="category-pill" data-category="caixas" role="tab">🎁 Kits Festa &amp; Caixas</button>
+                    </div>
+                </div>
+
+                <!-- Grade de Produtos Dinâmica -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Renderizado via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Destaque para os bolos -->
+        <section class="cakes-showcase-section" id="bolos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Confeitaria Afetiva</span>
+                    <h2 class="section-title">Bolos para deixar qualquer momento mais especial</h2>
+                    <p class="section-subtitle">
+                        Comemorações inesquecíveis começam com um bolo fofo, farto e decorado com paixão artesanal.
+                    </p>
+                </div>
+
+                <div class="cakes-showcase-grid">
+                    <div class="cake-type-card">
+                        <div class="cake-card-icon">🎂</div>
+                        <h3>Bolos de Aniversário</h3>
+                        <p>Massas macias de baunilha ou chocolate com recheios duplos cremosos, brigadeiro, frutas frescas e calda suave.</p>
+                        <span class="cake-flavor-tag">Mais pedido nas festas</span>
+                    </div>
+
+                    <div class="cake-type-card">
+                        <div class="cake-card-icon">🎨</div>
+                        <h3>Bolos Decorados</h3>
+                        <p>Acabamentos elegantes com brigadeiros boleados, morangos frescos, physalis, raspas nobres e fita de presente.</p>
+                        <span class="cake-flavor-tag">Visual deslumbrante</span>
+                    </div>
+
+                    <div class="cake-type-card">
+                        <div class="cake-card-icon">☕</div>
+                        <h3>Bolos Caseiros</h3>
+                        <p>Aquele bolo quentinho de vó para o café: cenoura com calda quente de brigadeiro, fubá cremoso e milho artesanal.</p>
+                        <span class="cake-flavor-tag">Gostinho de casa</span>
+                    </div>
+
+                    <div class="cake-type-card">
+                        <div class="cake-card-icon">🥳</div>
+                        <h3>Bolos para Comemorações</h3>
+                        <p>Criações sob medida para batizados, noivados, reuniões de família e conquistas que merecem ser celebradas.</p>
+                        <span class="cake-flavor-tag">Momentos especiais</span>
+                    </div>
+
+                    <div class="cake-type-card featured-custom-cake">
+                        <div class="cake-card-icon">✨</div>
+                        <h3>Bolos Personalizados</h3>
+                        <p>Monte o seu bolo dos sonhos: escolha a massa, os recheios favoritos, a cobertura e a mensagem no topo.</p>
+                        <span class="cake-flavor-tag">Feito sob medida</span>
+                    </div>
+                </div>
+
+                <div class="cakes-order-banner">
+                    <div class="banner-text">
+                        <h3>Quer um bolo personalizado para a sua data especial?</h3>
+                        <p>Fale diretamente com a gente e combine tamanho, sabores de recheio e detalhes da decoração.</p>
+                    </div>
+                    <a href="https://wa.me/5511999322574?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20um%20bolo%20especial%20com%20a%20V%C3%B3%20Rute."
+                       target="_blank" rel="noopener" class="btn-primary btn-large">
+                        🎂 Quero encomendar meu bolo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Monte sua Caixa de Delícias -->
+        <section class="box-builder-section" id="monte-sua-caixa">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Personalização Exclusiva</span>
+                    <h2 class="section-title">Monte sua Caixa de Delícias</h2>
+                    <p class="section-subtitle">Escolha o tamanho da caixa e combine seus salgadinhos fritos, assados e doces favoritos da Vó Rute.</p>
+                </div>
+
+                <div class="box-builder-card">
+                    <!-- Seleção do Tamanho -->
+                    <div class="box-size-selector">
+                        <button class="size-btn" data-size="4" data-price="30.00">
+                            <h4>🎁 Caixa Mimo (4 un)</h4>
+                            <p>R$ 30,00</p>
+                        </button>
+                        <button class="size-btn active" data-size="6" data-price="45.00">
+                            <h4>🧁 Caixa Festa (6 un) ⭐</h4>
+                            <p>R$ 45,00</p>
+                        </button>
+                        <button class="size-btn" data-size="12" data-price="78.00">
+                            <h4>🎂 Banquete Festa (12 un)</h4>
+                            <p>R$ 78,00</p>
+                        </button>
+                    </div>
+
+                    <!-- Visualização dos Slots da Caixa -->
+                    <div class="box-preview-container">
+                        <div class="box-status-bar">
+                            <span id="boxSlotsCount">0 de 6 itens escolhidos</span>
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">Clique no item para remover</span>
+                        </div>
+                        <div class="box-slots-grid" id="boxSlotsGrid">
+                            <!-- Gerado via JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Lista de Sabores Disponíveis -->
+                    <h3 style="font-size: 1.1rem; margin-bottom: 14px; color: var(--dark-chocolate);">
+                        Escolha os sabores para preencher a sua caixa:
+                    </h3>
+                    <div class="flavors-choice-grid" id="flavorsChoiceGrid">
+                        <!-- Gerado via JavaScript -->
+                    </div>
+
+                    <!-- Rodapé do Construtor -->
+                    <div class="box-builder-action">
+                        <div>
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Valor da sua caixa personalizada:</span>
+                            <div class="box-total-price" id="boxTotalPrice">R$ 45,00</div>
+                        </div>
+                        <button class="btn-primary" id="addBoxToCartBtn">
+                            🎁 Adicionar Caixa à Sacola
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Galeria de Fotos -->
+        <section class="gallery-section" id="galeria">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Nossa Cozinha em Imagens</span>
+                    <h2 class="section-title">Galeria da Vó Rute</h2>
+                    <p class="section-subtitle">
+                        Um passeio visual pelas delícias preparadas no nosso ateliê com muito afeto e capricho.
+                    </p>
+                </div>
+
+                <!-- Filtros da Galeria -->
+                <div class="gallery-filters" role="tablist">
+                    <button class="gallery-filter-btn active" data-filter="all">Todas as Fotos</button>
+                    <button class="gallery-filter-btn" data-filter="bolos">Bolos</button>
+                    <button class="gallery-filter-btn" data-filter="salgados-fritos">Coxinhas &amp; Fritos</button>
+                    <button class="gallery-filter-btn" data-filter="salgados-assados">Esfihas &amp; Assados</button>
+                    <button class="gallery-filter-btn" data-filter="doces">Docinhos</button>
+                    <button class="gallery-filter-btn" data-filter="festas">Kits Festa</button>
+                </div>
+
+                <!-- Grid de Fotos da Galeria -->
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Itens renderizados dinamicamente pelo JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Seção para Encomendas -->
+        <section class="order-callout-section" id="encomendas">
+            <div class="container">
+                <div class="order-callout-card">
+                    <div class="order-callout-content">
+                        <span class="section-tag-light">Celebre com Sabor</span>
+                        <h2 class="callout-title">Tem uma comemoração chegando?</h2>
+                        <p class="callout-desc">
+                            Faça sua encomenda e deixe a parte mais gostosa da festa com a gente! Seja um aniversário,
+                            reunião em família, confraternização ou aquele café especial da tarde, a Vó Rute prepara
+                            tudo fresquinho com ingredientes de primeira e entrega quentinho no seu endereço.
+                        </p>
+                        <div class="callout-actions">
+                            <a href="https://wa.me/5511999322574?text=Ol%C3%A1!%20Tenho%20uma%20comemora%C3%A7%C3%A3o%20e%20gostaria%20de%20fazer%20uma%20encomenda%20com%20a%20V%C3%B3%20Rute."
+                               target="_blank" rel="noopener" class="btn-whatsapp-large" id="btnOrderWhatsapp">
+                                💬 Fazer pedido pelo WhatsApp
+                            </a>
+                            <a href="#cardapio" class="btn-outline-light">
+                                Ver Cardápio Completo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-callout-badge-card">
+                        <div class="callout-badge-inner">
+                            <span class="badge-icon-huge">📦</span>
+                            <h4>Encomendas para Festas</h4>
+                            <p>Centos de salgados fritos e assados, docinhos finos e bolos decorados com pontualidade garantida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Diferenciais da Marca -->
+        <section class="differentials-section" id="diferenciais">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Por Que Escolher a Vó Rute</span>
+                    <h2 class="section-title">O Jeitinho Vó Rute de Fazer</h2>
+                    <p class="section-subtitle">Pequenos detalhes que tornam cada mordida inesquecível.</p>
+                </div>
+
+                <div class="differentials-grid">
+                    <div class="diff-card">
+                        <div class="diff-icon">❤️</div>
+                        <h3>Feito com carinho</h3>
+                        <p>Cada produto é preparado com atenção aos mínimos detalhes e dedicação artesanal, sem pressa nem processos industriais.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">🥰</div>
+                        <h3>Sabor caseiro</h3>
+                        <p>Receitas que lembram aquele gostinho especial de comida de vó, com temperos frescos da horta e equilíbrio perfeito.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">✨</div>
+                        <h3>Tudo fresquinho</h3>
+                        <p>Produtos preparados com cuidado para chegar saborosos até você: salgados fritos e assados no dia e doces aveludados.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">🎂</div>
+                        <h3>Para todos os momentos</h3>
+                        <p>Encomendas completas para festas, aniversários, reuniões de família, lanches da tarde e caixas especiais de presente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Depoimentos -->
+        <section class="testimonials-section" id="depoimentos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Amor em Forma de Doce e Salgado</span>
+                    <h2 class="section-title">Quem experimenta, recomenda</h2>
+                    <p class="section-subtitle">Depoimentos carinhosos de clientes que celebraram momentos especiais com as nossas receitas.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-quote">
+                            "O cento de salgados assados e a coxinha com catupiry foram o maior sucesso no aniversário do meu filho! A massa da empada desmancha na boca e as esfihas estavam suculentas e macias. Parabéns pelo capricho!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+                                alt="Foto ilustrativa de cliente" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Mariana Fernandes</h4>
+                                <p>Exemplo de Avaliação • Aniversário Infantil</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-quote">
+                            "O bolo Red Velvet e os brigadeiros de pistache surpreenderam todos os convidados. O sabor é realmente caseiro, nada enjoativo, com a delicadeza e afeto de receita de vó. Viramos clientes fiéis!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                                alt="Foto ilustrativa de cliente" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Lucas Mendonça</h4>
+                                <p>Exemplo de Avaliação • Comemoração em Família</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-quote">
+                            "Atendimento nota dez no WhatsApp! Pedi a caixa com salgadinhos e doces para um café da tarde na empresa e chegou pontual, quentinha e muito bem embalada. Dá para sentir o amor em cada detalhe."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
+                                alt="Foto ilustrativa de cliente" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Camila Duarte</h4>
+                                <p>Exemplo de Avaliação • Encomenda Corporativa</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Perguntas Frequentes (FAQ) -->
+        <section class="faq-section" id="duvidas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Tire suas Dúvidas</span>
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-subtitle">Tudo o que você precisa saber antes de fazer sua encomenda com a Vó Rute.</p>
+                </div>
+
+                <div class="faq-list">
+                    <!-- Pergunta 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como faço uma encomenda?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Você pode montar sua sacola diretamente aqui pelo site e clicar em <strong>"Finalizar Pedido no WhatsApp"</strong>, ou falar conosco clicando nos botões de pedido. Nós recebemos os itens escolhidos e combinamos a forma de pagamento e horário de entrega com você!
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Com quanto tempo de antecedência devo pedir?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Para caixas de doces e salgados prontos, aceitamos pedidos com poucas horas de antecedência (conforme disponibilidade do dia). Para <strong>centos de salgados</strong> e <strong>bolos confeitados decorados</strong>, recomendamos encomendar com 24h a 48h de antecedência para garantir o preparo perfeito.
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Vocês fazem bolos personalizados?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Nós adoramos preparar bolos personalizados. Você pode escolher a massa (baunilha, chocolate ou red velvet), os recheios favoritos (brigadeiro gourmet, ninho com frutas, doce de leite artesanal) e o estilo de decoração para a sua comemoração.
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Quais salgados estão disponíveis?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Temos <strong>salgados fritos</strong> (coxinhas com Catupiry, bolinhas de queijo crocantes, quibes tradicionais com requeijão e risoles de palmito com alho-poró) e <strong>salgados assados</strong> (esfihas fechadas de carne da Vó Rute, empadas tradicionais de palmito que desmancham na boca, enroladinhos de presunto e queijo e folhados). Todos disponíveis por unidade ou em centos para festas.
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Vocês fazem encomendas para festas?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Com certeza! Temos pacotes especiais de centos de salgados fritos e assados, centos de docinhos tradicionais e gourmets, além de kits completos com bolo para aniversários, batizados, chás e reuniões familiares.
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 6 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Existe quantidade mínima para encomenda?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Não há quantidade mínima para caixas avulsas e encomendas personalizadas pelo site. Para centos de salgados, o mínimo é de 50 unidades por sabor. Entre em contato pelo WhatsApp para condições especiais de grandes pedidos para festas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. CTA Final -->
+        <section class="final-cta-section" id="contato">
+            <div class="container">
+                <div class="final-cta-inner">
+                    <span class="cta-mini-tag">✨ Peça agora mesmo</span>
+                    <h2 class="final-cta-title">Pronta para adoçar o seu dia?</h2>
+                    <p class="final-cta-subtitle">
+                        Faça seu pedido agora pelo WhatsApp e receba delícias fresquinhas da Vó Rute. 
+                        Salgados, doces, bolos e muito carinho em cada encomenda.
+                    </p>
+                    <div class="final-cta-buttons">
+                        <a href="https://wa.me/5511999322574?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20com%20a%20Guloseimas%20da%20V%C3%B3%20Rute."
+                           target="_blank" rel="noopener" class="btn-primary" id="btnFinalCta">
+                            💬 Fazer Pedido pelo WhatsApp
+                        </a>
+                        <a href="#cardapio" class="btn-outline-cta">
+                            Ver Cardápio Completo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 13. Rodapé Principal -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo" style="margin-bottom: 12px;">
+                        <img src="assets/imagens reais/logo.png" onerror="this.onerror=null; this.src='assets/images/logo.png';" alt="Logo Guloseimas da Vó Rute" class="brand-logo-img" style="border-color: rgba(255,255,255,0.2);">
+                        <div class="brand-title" style="color: #FFFFFF;">
+                            Guloseimas
+                            <span style="color: var(--primary-light);">Da Vó Rute</span>
+                        </div>
+                    </div>
+                    <p>
+                        Doces, salgados e bolos feitos com carinho. Receitas de família preparadas artesanalmente para tornar cada momento inesquecível.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/guloseimasdavorute" target="_blank" rel="noopener" class="social-link social-link-instagram" title="Instagram: @guloseimasdavorute" aria-label="Instagram @guloseimasdavorute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5511999322574" target="_blank" rel="noopener" class="social-link" title="WhatsApp da Vó Rute" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio" data-tab="inicio">🏠 Início</a></li>
+                        <li><a href="#bolos" data-tab="bolos">🎂 Bolos</a></li>
+                        <li><a href="#doces" data-tab="doces">🍬 Doces</a></li>
+                        <li><a href="#salgados" data-tab="salgados">🥟 Salgados</a></li>
+                        <li><a href="#sobre" data-tab="sobre">📖 Sobre nós</a></li>
+                        <li><a href="#contato" data-tab="contato">📞 Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Cardápio</h4>
+                    <ul>
+                        <li><a href="#salgados" data-tab="salgados" onclick="filterCatalog('salgados-fritos')">Salgados Fritos &amp; Coxinhas</a></li>
+                        <li><a href="#salgados" data-tab="salgados" onclick="filterCatalog('salgados-assados')">Salgados Assados &amp; Esfihas</a></li>
+                        <li><a href="#doces" data-tab="doces" onclick="filterCatalog('brigadeiros')">Doces &amp; Brigadeiros</a></li>
+                        <li><a href="#bolos" data-tab="bolos" onclick="filterCatalog('bolos')">Bolos Salgados &amp; Tortas</a></li>
+                        <li><a href="#inicio" data-tab="inicio" onclick="filterCatalog('caixas')">Centos &amp; Kits para Festas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento &amp; Encomendas</h4>
+                    <div class="footer-info-item">
+                        <span>💬</span>
+                        <span>WhatsApp: +55 (11) 99932-2574</span>
+                    </div>
+                    <div class="footer-info-item">
+                        <span style="display:inline-flex; align-items:center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="url(#ig-grad-footer)" style="flex-shrink:0;">
+                                <defs>
+                                    <linearGradient id="ig-grad-footer" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#f09433"/>
+                                        <stop offset="25%" style="stop-color:#e6683c"/>
+                                        <stop offset="50%" style="stop-color:#dc2743"/>
+                                        <stop offset="75%" style="stop-color:#cc2366"/>
+                                        <stop offset="100%" style="stop-color:#bc1888"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </span>
+                        <a href="https://www.instagram.com/guloseimasdavorute" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">@guloseimasdavorute</a>
+                    </div>
+                    <div class="footer-info-item">
+                        <span>📍</span>
+                        <span>Ateliê Artesanal: São Paulo - SP</span>
+                    </div>
+                    <div class="footer-info-item">
+                        <span>⏰</span>
+                        <span>Seg a Sáb: 08h às 19h | Dom: 09h às 14h</span>
+                    </div>
+                    <div class="footer-info-item">
+                        <span>💳</span>
+                        <span>Pix, Cartão de Débito/Crédito e Dinheiro</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guloseimas da Vó Rute. Todos os direitos reservados.</p>
+                <p>Doces, salgados e bolos feitos com carinho.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Drawer Lateral: Sacola de Compras -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Sacola de compras">
+        <div class="cart-drawer-header">
+            <h3>Sua Sacola de Delícias 🧁</h3>
+            <button class="btn-close-drawer" id="closeCartDrawerBtn" title="Fechar Sacola">✕</button>
+        </div>
+
+        <!-- Progresso de Frete Grátis -->
+        <div class="shipping-progress-box">
+            <div class="shipping-progress-text" id="shippingProgressText">
+                Faltam <strong>R$ 90,00</strong> para ganhar Frete Grátis!
+            </div>
+            <div class="shipping-progress-bar-bg">
+                <div class="shipping-progress-bar-fill" id="shippingProgressBarFill"></div>
+            </div>
+        </div>
+
+        <!-- Lista de Itens no Carrinho -->
+        <div class="cart-items-list" id="cartItemsList">
+            <!-- Renderizado via JavaScript -->
+        </div>
+
+        <!-- Rodapé do Carrinho com Resumo e Checkout -->
+        <div class="cart-drawer-footer">
+            <textarea id="orderNotes" class="order-notes-input"
+                placeholder="Alguma observação para a Vó Rute? (Ex: Data da festa, sem cebola, mensagem no cartão...)"></textarea>
+
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">R$ 0,00</span>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Total</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+
+            <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp" onclick="checkoutWhatsApp()">
+                <span>💬 Finalizar Pedido no WhatsApp</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Modal de Detalhes do Produto (Quick View) -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="closeProductModalBtn" title="Fechar detalhes">✕</button>
+            <div class="modal-img-wrap">
+                <img src="" alt="" id="modalImg">
+            </div>
+            <div class="modal-body">
+                <span class="modal-tag" id="modalTag">Categoria</span>
+                <h2 class="modal-title" id="modalTitle">Título da Guloseima</h2>
+                <p class="modal-desc" id="modalDesc">Descrição rica do doce...</p>
+
+                <div class="modal-ingredients">
+                    <p><strong>Ingredientes:</strong> <span id="modalIngredients"></span></p>
+                    <p style="margin-top: 6px; font-size: 0.8rem; color: var(--text-muted);">
+                        <strong>Alérgênicos:</strong> <span id="modalAllergens"></span>
+                    </p>
+                </div>
+
+                <div class="modal-action-row">
+                    <div class="modal-price" id="modalPrice">R$ 0,00</div>
+                    <button class="btn-primary" id="modalAddBtn" style="margin-left: auto;">
+                        Adicionar à Sacola
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox da Galeria -->
+    <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="lightboxCloseBtn" title="Fechar visualização">✕</button>
+            <img src="" alt="" id="lightboxImg" class="lightbox-image">
+            <div class="lightbox-caption" id="lightboxCaption">Legenda da imagem</div>
+        </div>
+    </div>
+
+    <!-- Toast de Confirmação -->
+    <div class="toast-notification" id="toastNotification" role="alert">
+        <span class="toast-icon">✨</span>
+        <span class="toast-text" id="toastText">Item adicionado com sucesso!</span>
+    </div>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511999322574?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda%20com%20a%20Guloseimas%20da%20V%C3%B3%20Rute."
+        target="_blank" rel="noopener" class="floating-whatsapp-btn" title="Conversar no WhatsApp da Vó Rute"
+        aria-label="Contato direto pelo WhatsApp">
+        💬
+    </a>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
